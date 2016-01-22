@@ -53,8 +53,8 @@ function fileApp(api) {
       var textLocation = api.substring(posSlash + 1, posLastSlash);
       var urlPath = api.substring(posLocation, posLastSlash);
 
-      div.innerHTML = ['<h3 style="center;">', escapeHtml(textLocation), '</h3>'].join("");
-      window.history.pushState({"html": "","pageTitle": ""}, textLocation, urlPath);
+      //div.innerHTML = ['<h3 style="center;">', escapeHtml(textLocation), '</h3>'].join("");
+     pushInHistory(textLocation, urlPath)
 
 //       if (api != filesapp.dataset.api) { // If it's not the base path
 //         var posSlash = api.lastIndexOf('/', api.length - 2);
